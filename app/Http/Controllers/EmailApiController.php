@@ -10,7 +10,7 @@ class EmailApiController extends Controller
 {
     public function sendEmailQueue(Request $request)
     {
-        $data = array(
+       /* $data = array(
             'cliente' => 'Alberto Fonseca Quintanell',
             'rut' => '18.168.926-9',
             'ticket' => 676,
@@ -25,13 +25,13 @@ class EmailApiController extends Controller
             'from' => 'alberto.fonsecaq@gmail.com',
             'email' => 'alberto.fonsecaq@gmail.com',
             'data' => $data
-        ];
+        ];*/
 
-
+        $parameters = $request->all();
 
         SendEmailJob::dispatch($parameters)
             ->onQueue('email');
 
-        return \response(['status' => true],200);
+        return \response(['status' => $parameters['data']],200);
     }
 }

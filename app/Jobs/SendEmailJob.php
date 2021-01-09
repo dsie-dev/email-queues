@@ -22,7 +22,7 @@ class SendEmailJob implements ShouldQueue
      *
      * @var int
      */
-   // public $tries = 25;
+    public $tries = 5;
 
     /**
      * The maximum number of unhandled exceptions to allow before failing.
@@ -58,8 +58,8 @@ class SendEmailJob implements ShouldQueue
      *
      * @return array
      */
-  /*  public function backoff()
+    public function backoff()
     {
         return [1, 5, 10];
-    }*/
+    }
 }
