@@ -43,7 +43,7 @@ class EmailTagDomicilio extends SendEmail
     {
         return $this->view('email.tagDomicilio')
                     ->subject($this->mysubject)
-                    ->from('yenelisreodri@gmail.com')
+                    ->from($this->myfrom)
                     ->with(['data' => $this->data]);
     }
 }

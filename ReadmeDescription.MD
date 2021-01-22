@@ -18,7 +18,7 @@
 5- set up supervisor de Colas
 
 #endpoint tagDomicilio
-    url: http://nombreDominio/email
+    url: http://nombreDominio/api/email
     method: post
     Input:      
         $data = array(
