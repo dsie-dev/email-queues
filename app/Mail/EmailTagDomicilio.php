@@ -41,8 +41,6 @@ class EmailTagDomicilio extends SendEmail
      */
     public function build()
     {
-        var_dump($this->data);
-        var_dump($this); die;
         return $this->view('email.tagDomicilio')
                     ->subject($this->mysubject)
                     ->from($this->myfrom)
