@@ -29,7 +29,7 @@ class EmailTagDomicilio extends SendEmail
             'data' => $data
         ];
         */
-        $this->data = json_decode($input['data']);
+        $this->data = $input['data'];
         $this->mysubject = $input['subject'];
         $this->myfrom = $input['from'];
     }

@@ -4,7 +4,7 @@
   <!--  <title>How to send mail using queue in Laravel 6? - ItSolutionStuff.com</title> -->
 </head>
 <body>
-{{json_decode($data)}}
+{{$data}}
 
 <p>Atentamente,</p>
 <p>TAD Equipo Atención al cliente</p><br>
