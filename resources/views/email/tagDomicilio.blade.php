@@ -4,12 +4,7 @@
   <!--  <title>How to send mail using queue in Laravel 6? - ItSolutionStuff.com</title> -->
 </head>
 <body>
-<p>Estimado(a) {{ $data->cliente }}</p>
-<p>Su solicitud de servicio <strong>{{ $data->servicio }}</strong> se ha recibido exitosamente.  @if ($data->existe_cod_descuento != true )Para continuar con el servicio, es necesario que realice el pago. @endif Para consultar el estado de la gestión, ingrese a
-    <a href="http://tad.integrocorp.cl/{{ $data->url_abbr }}">nuestro sitio</a> y en la sección "Consulte el estado de su solicitud", digite el número de rut asociado a la
-    solicitud y el número de ticket.</p>
-<p><strong>RUT</strong> {{ $data->rut }}</p>
-<p><strong>No. de ticket</strong> {{ $data->ticket }}</p><br>
+{{$data}}
 
 <p>Atentamente,</p>
 <p>TAD Equipo Atención al cliente</p><br>
