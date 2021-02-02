@@ -44,6 +44,6 @@ class EmailTagDomicilio extends SendEmail
         return $this->view('email.tagDomicilio')
                     ->subject($this->mysubject)
                     ->from($this->myfrom)
-                    ->with(['data' => json_decode($this->data)]);
+                    ->with(['data' => $this->data]);
     }
 }
