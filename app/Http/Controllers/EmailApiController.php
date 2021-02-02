@@ -12,6 +12,7 @@ class EmailApiController extends Controller
     public function sendEmailQueue(Request $request)
     {
         $parameters = $request->all();
+        var_dump($parameters);die;
         SendEmailJob::dispatch($parameters)
             ->onQueue('email');
         return \response(['status' => $parameters['data']],200);
