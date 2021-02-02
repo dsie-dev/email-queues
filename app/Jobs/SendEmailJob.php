@@ -50,6 +50,7 @@ class SendEmailJob implements ShouldQueue
      */
     public function handle()
     {
+        Log::info("email: ".json_encode($this->details));
         $email = new EmailTagDomicilio($this->details);
 
         $res_mail = Mail::to($this->details['email'])->send($email);
