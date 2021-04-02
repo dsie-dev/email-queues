@@ -21,14 +21,6 @@ class EmailTagDomicilio extends SendEmail
      */
     public function __construct(array $input)
     {
-        /*
-        $parameters = [
-            'subject' => 'Tag a domicilio',
-            'from' => 'tagDomicilio@gmail.com',
-            'email' => 'alberto.fonsecaq@gmail.com',
-            'data' => $data
-        ];
-        */
         $this->data = $input['data'];
         $this->mysubject = $input['subject'];
         $this->myfrom = $input['from'];
@@ -41,6 +33,12 @@ class EmailTagDomicilio extends SendEmail
      */
     public function build()
     {
+        if (isset($this->data['url_abbr']) && ($this->data['url_abbr']=="cn" || $this->data['url_abbr']=="avs" )){
+            return $this->view('email.tagDomicilioCN')
+                ->subject($this->mysubject)
+                ->from($this->myfrom)
+                ->with(['data' => $this->data]);
+        }
         return $this->view('email.tagDomicilio')
                     ->subject($this->mysubject)
                     ->from($this->myfrom)
