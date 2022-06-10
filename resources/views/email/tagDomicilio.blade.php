@@ -16,6 +16,10 @@
 <p><strong>RUT</strong> {{ $data['rut'] }}</p>
 <p><strong>No. de ticket</strong> {{ $data['ticket'] }}</p><br>
 
+@if (isset($data['url_abbr']) && $data['url_abbr'] == 'ac')
+    <p>Adicional a lo anterior, le mostramos los <a target="_blank" href="{{$data['terminos_condiciones_url']}}">términos y condiciones</a> aceptados al momento de solicitar el servicio.</p>
+@endif
+
 <p>Atentamente,</p>
 <p>TAD Equipo Atención al cliente</p><br>
 
