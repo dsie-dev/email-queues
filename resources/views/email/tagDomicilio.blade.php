@@ -10,7 +10,7 @@
         Se revisarán sus documentos y en menos de 24 horas hábiles se le confirmará que estos estén correctos para que
         realice el pago. @else Para continuar con el servicio, es necesario <a href="{{ $data['linkpayment'] }}">realizar
             el pago</a>. @endif @endif Para consultar el estado de la gestión, ingrese a
-    <a href="https://tad.integrocorp.cl/{{ $data['url_abbr'] }}">nuestro sitio</a> y en la sección "Consulte el estado
+    <a href="https://tag.integrocorp.cl/{{ $data['url_abbr'] }}">nuestro sitio</a> y en la sección "Consulte el estado
     de su solicitud", digite el número de rut asociado a la
     solicitud y el número de ticket.</p>
 <p><strong>RUT</strong> {{ $data['rut'] }}</p>
