@@ -21,7 +21,7 @@
 @endif
 
 <p>Atentamente,</p>
-<p>TAD Equipo Atención al cliente</p><br>
+<p>Equipo Tag a Domicilio</p><br>
 
 <small>Este mail se ha enviado automáticamente, por favor no responda al mismo.</small>
 <br>
